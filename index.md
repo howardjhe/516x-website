@@ -20,6 +20,7 @@ To fulfill this project, we can follow the following steps:
   - Split the dataset into training, and test sets with the sizes of 0.8 and 0.2, respectively.
 
 ```Python
+# Import the necessary packages.
 import numpy as np
 import cv2
 import os
