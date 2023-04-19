@@ -8,9 +8,11 @@ Weed image classification is an important task in precision agriculture, which a
 
 _All experiments are conducted in Python and run on a laptop with four 2.4 GHz cores and 16 GB of RAM._
 
+# Workflow
+
 To fulfill this project, we can follow the following steps:
 
-1.	Data preparation:
+## Data preparation:
   - Import the necessary packages.
   - Download the dataset from Kaggle [Link](https://www.kaggle.com/datasets/fpeccia/weed-detection-in-soybean-crops)
   - Rearrange the number of images for weed and non-weed into 260 and 5000, respectively.
