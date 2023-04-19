@@ -19,6 +19,33 @@ To fulfill this project, we can follow the following steps:
   - Preprocess the data by resizing images, normalizing pixel values, and formatting the data type (for example, squeeze the dimension) in order to input the model. We use NumPy array as input for NB and SVM, and Tensor for CNN.
   - Split the dataset into training, and test sets with the sizes of 0.8 and 0.2, respectively.
 
+```Python
+import numpy as np
+import cv2
+import os
+import glob
+import time
+
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.naive_bayes import GaussianNB
+from sklearn.svm import SVC, LinearSVC
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+from sklearn.pipeline import make_pipeline
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+
+from imblearn.over_sampling import SMOTE, RandomOverSampler
+from imblearn.under_sampling import RandomUnderSampler
+from imblearn.pipeline import Pipeline
+
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import torch.nn.functional as F
+from torchvision import models
+from torch.utils.data import Dataset, DataLoader
+```
+
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
