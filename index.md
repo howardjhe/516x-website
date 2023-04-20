@@ -19,7 +19,7 @@ To fulfill this project, we can follow the following steps:
   - Preprocess the data by resizing images, normalizing pixel values, and formatting the data type (for example, squeeze the dimension) in order to input the model. We use NumPy array as input for NB and SVM, and Tensor for CNN.
   - Split the dataset into training, and test sets with the sizes of 0.8 and 0.2, respectively.
 
-```Python
+```python
 # Import the necessary packages.
 import numpy as np
 import cv2
@@ -47,7 +47,7 @@ from torchvision import models
 from torch.utils.data import Dataset, DataLoader
 ```
 
-```Python
+```python
 def load_images(path, label):
     images = []
     labels = []
@@ -109,7 +109,7 @@ def run(method, sampling=0, crossvalidation=0, optm="SGD"):
     return acc, elapsed_time
 ```
 
-```Python
+```python
 class WeedDataset(Dataset):
     def __init__(self, data, labels):
         self.data = data
