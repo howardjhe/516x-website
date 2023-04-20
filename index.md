@@ -18,7 +18,7 @@ _All experiments are conducted in Python and run on a laptop with four 2.4 GHz c
 
 To fulfill this project, we can follow the following steps:
 
-## Data preparation:
+## Data preparation
   - Download the dataset from Kaggle ([Link](https://www.kaggle.com/datasets/fpeccia/weed-detection-in-soybean-crops))
   - Rearrange the number of images for weed and non-weed into 260 and 5000, respectively.
   - Import the necessary packages.
@@ -201,12 +201,24 @@ def cnn(X_train, X_test, y_train, y_test, optm="SGD"):
 ```
 
 ## Model training
-
+- Fit a Naive Bayes classifier.
 ```python
 acc_nb, elapsed_time_nb = run("nb")
+```
+- Fit a Naive Bayes classifier with oversampling and undersampling (using the functions SMOTE() and RandomUnderSampler() with default settings). The minority which is weed images is expanded to the same size as the majority, and the number of training set is changed from 4028 to 8022.
+```python
 acc_nb_os, elapsed_time_nb_os = run("nb", sampling=1)
+```
+- Fit an SVM classifier (implemented with gamma=0.1, C=1, and linear as kernel)
+```python
 acc_svm, elapsed_time_svm = run("svm")
+```
+- Fit an SVM classifier with cross-validation (the hyperparameters combination of gamma, C and kernel are [1, 0.1, 0.01], [0.1, 1, 10], [linear, rbf], respectively.)
+```python
 acc_svm_cv, elapsed_time_svm_cv = run("svm", crossvalidation=1)
+```
+- Train a CNN classifier using the preprocessed images. Use the simplest optimizer, stochastic gradient descent with 30 training epochs, 0.01 learning rate, and 0.9 momentum.
+```python
 acc_cnn, elapsed_time_cnn = run("cnn")
 ```
 
