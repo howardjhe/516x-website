@@ -48,6 +48,12 @@ from torch.utils.data import Dataset, DataLoader
 ```
 
 
+# Results
+
+![Branching](https://github.com/howardjhe/516x-website/blob/master/figures/time.png)
+![Branching](https://github.com/howardjhe/516x-website/blob/master/figures/acc.png)
+
+
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](./another-page.html).
