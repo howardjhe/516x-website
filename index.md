@@ -12,8 +12,8 @@ Weed image classification is an important task in precision agriculture, which a
 > 
 > **Compare the computing time and accuracy between NB, SVM, and CNN.**
 
-<img src="figures/intro_01.jpeg" width="600" />
-<img src="figures/intro_02.jpeg" width="600" />
+<img src="figures/intro_1.jpeg" width="600" />
+<img src="figures/intro_2.jpeg" width="600" />
 
 _All experiments are conducted in Python and run on a laptop with four 2.4 GHz cores and 16 GB of RAM._
 
