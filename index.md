@@ -195,7 +195,53 @@ def cnn(X_train, X_test, y_train, y_test, optm="SGD"):
     return acc_cnn, elapsed_time
 ```
 
+# Execute the code
+
+```python
+acc_nb, elapsed_time_nb = run("nb")
+acc_nb_os, elapsed_time_nb_os = run("nb", sampling=1)
+acc_svm, elapsed_time_svm = run("svm")
+acc_svm_cv, elapsed_time_svm_cv = run("svm", crossvalidation=1)
+acc_cnn, elapsed_time_cnn = run("cnn")
+```
+
 # Results
+
+```python
+# Visualize the reults
+
+import matplotlib.pyplot as plt
+
+methods = ['NB', 'NB with \n oversampling', 'SVM', 'SVM with \n cross validation', 'CNN']
+accuracies = np.array([acc_nb, acc_nb_os, acc_svm, acc_svm_cv, acc_cnn]) *100
+times = np.array([elapsed_time_nb, elapsed_time_nb_os, elapsed_time_svm, elapsed_time_svm_cv, elapsed_time_cnn])
+
+def add_value_labels(bs):
+    for bar in bs:
+        height = bar.get_height()
+        plt.text(bar.get_x()+bar.get_width()/2,height,f'{height:.2f}',ha='center',va='top',fontsize=9)
+
+bar_acc = plt.bar(methods, accuracies, color='g')
+plt.yscale('linear')
+plt.ylim([60,100])
+plt.xlabel('Methods')
+plt.ylabel('Accuracy (%)')
+plt.title('Comparison of Accuracy for Different Methods')
+add_value_labels(bar_acc)
+plt.tight_layout()
+plt.savefig('acc.png', dpi=300)
+plt.show()
+
+bar_time = plt.bar(methods, times, color='c')
+plt.yscale('log')
+plt.xlabel('Methods')
+plt.ylabel('Time (s)')
+plt.title('Comparison of Computing Time for Different Methods')
+add_value_labels(bar_time)
+plt.tight_layout()
+plt.savefig('time.png', dpi=300)
+plt.show()
+```
 
 <img src="figures/time.png" width="600" />
 <img src="figures/acc.png" width="600" />
