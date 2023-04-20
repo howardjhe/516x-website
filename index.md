@@ -47,6 +47,67 @@ from torchvision import models
 from torch.utils.data import Dataset, DataLoader
 ```
 
+```Python
+def load_images(path, label):
+    images = []
+    labels = []
+    for img_path in glob.glob(os.path.join(path, "*.tif")):
+        img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
+        img = cv2.resize(img, (64, 64))
+        images.append(img)
+        labels.append(label)
+    return images, labels
+
+def run(method, sampling=0, crossvalidation=0, optm="SGD"):
+
+    weed_images, weed_labels = load_images("weed", 1)
+    non_weed_images, non_weed_labels = load_images("non_weed", 0)
+    all_images = np.array(weed_images + non_weed_images)
+    all_labels = np.array(weed_labels + non_weed_labels)
+
+    X_train, X_test, y_train, y_test = train_test_split(all_images, all_labels, test_size=0.2, random_state=42)
+
+    if method == "nb":
+        start_time = time.time()
+        X_train = X_train.reshape(X_train.shape[0], -1)
+        X_test = X_test.reshape(X_test.shape[0], -1)
+        if sampling != 0:
+            resampling = Pipeline([('oversample', SMOTE()), ('undersample', RandomUnderSampler())])
+            X_train, y_train = resampling.fit_resample(X_train, y_train)
+        mtd = GaussianNB()
+        mtd.fit(X_train, y_train)
+        y_pred = mtd.predict(X_test)
+        end_time = time.time()
+        elapsed_time = end_time - start_time
+        acc = accuracy_score(y_test, y_pred)
+
+    elif method == "svm":
+        start_time = time.time()
+        X_train = X_train.reshape(X_train.shape[0], -1)
+        X_test = X_test.reshape(X_test.shape[0], -1)
+        scaler = StandardScaler()
+        X_train_scaled = scaler.fit_transform(X_train)
+        X_test_scaled = scaler.transform(X_test)
+        if crossvalidation != 0:
+            param_grid = {'C': [0.1, 1, 10], 'gamma': [1, 0.1, 0.01], 'kernel': ['linear', 'rbf']}
+            mtd = GridSearchCV(SVC(), param_grid, cv=2, verbose=2)
+            mtd.fit(X_train_scaled, y_train)
+            best_svm = mtd.best_estimator_
+            y_pred = best_svm.predict(X_test_scaled)
+        else:
+            mtd = SVC(kernel='linear', C=1, gamma=0.1)
+            mtd.fit(X_train_scaled, y_train)
+            y_pred = mtd.predict(X_test_scaled)
+            
+        acc = accuracy_score(y_test, y_pred)
+        end_time = time.time()
+        elapsed_time = end_time - start_time
+    
+    elif method == "cnn":
+        acc, elapsed_time = cnn(X_train, X_test, y_train, y_test, optm)
+    
+    return acc, elapsed_time
+```
 
 # Results
 
