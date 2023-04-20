@@ -14,7 +14,7 @@ Weed image classification is an important task in precision agriculture, which a
 
 _All experiments are conducted in Python and run on a laptop with four 2.4 GHz cores and 16 GB of RAM._
 
-# Workflow
+# Methods
 
 To fulfill this project, we can follow the following steps:
 
@@ -262,6 +262,11 @@ plt.show()
 
 <img src="figures/time.png" width="600" />
 <img src="figures/acc.png" width="600" />
+
+# Discussion
+
+# Conclusion
+
 
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
