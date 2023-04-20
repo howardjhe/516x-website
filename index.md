@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Introduction
+## Introduction
 
 Weed image classification is an important task in precision agriculture, which aims to improve farming practices by using advanced technologies and data-driven decision-making. The main objective of weed image classification is to distinguish between weed and crop plants in images taken from agricultural fields. By accurately identifying weed species and their locations, farmers can take targeted actions to control weed growth, leading to improved crop yields and reduced usage of herbicides. When it comes to binary classification, we can use supervised learning like Navie Bayes (NB), support vector machine (SVM) and convolutional neuron network (CNN). In order to implement to real-world tasks, inference time, computing cost and accuracy are important to be consider determining which the methods are most suitable to be used. Thus, in this project, we experimentally present which of the binary classification supervised learning methods (NB, SVM, or CNN) performs better in terms of accuracy and computing time for weed detection in soybean crops.
 
@@ -12,9 +12,12 @@ Weed image classification is an important task in precision agriculture, which a
 > 
 > **Compare the computing time and accuracy between NB, SVM, and CNN.**
 
+<img src="figures/intro_01.jpeg" width="600" />
+<img src="figures/intro_02.jpeg" width="600" />
+
 _All experiments are conducted in Python and run on a laptop with four 2.4 GHz cores and 16 GB of RAM._
 
-# Methods
+## Methods
 
 To fulfill this project, we can follow the following steps:
 
@@ -222,7 +225,7 @@ acc_svm_cv, elapsed_time_svm_cv = run("svm", crossvalidation=1)
 acc_cnn, elapsed_time_cnn = run("cnn")
 ```
 
-# Results
+## Results
 
 ```python
 # Visualize the reults
@@ -263,9 +266,9 @@ plt.show()
 <img src="figures/time.png" width="600" />
 <img src="figures/acc.png" width="600" />
 
-# Discussion
+## Discussion
 
-# Conclusion
+## Conclusion
 
 
 
