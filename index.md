@@ -50,7 +50,7 @@ from torch.utils.data import Dataset, DataLoader
 
 # Results
 
-<img src="https://github.com/howardjhe/516x-website/blob/master/figures/time.png" width="200" />
+<img src="https://github.com/howardjhe/516x-website/blob/master/figures/time.png" width="400" />
 
 ![acc](https://github.com/howardjhe/516x-website/blob/master/figures/acc.png)
 
