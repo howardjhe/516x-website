@@ -21,6 +21,7 @@ To fulfill this project, we can follow the following steps:
 
 ```python
 # Import the necessary packages.
+
 import numpy as np
 import cv2
 import os
@@ -48,6 +49,8 @@ from torch.utils.data import Dataset, DataLoader
 ```
 
 ```python
+# Preprocess the data by resizing images, normalizing pixel values, and formatting the data type
+
 def load_images(path, label):
     images = []
     labels = []
@@ -110,6 +113,9 @@ def run(method, sampling=0, crossvalidation=0, optm="SGD"):
 ```
 
 ```python
+
+# Build the Convolutional Neuronal Network
+
 class WeedDataset(Dataset):
     def __init__(self, data, labels):
         self.data = data
