@@ -50,8 +50,8 @@ from torch.utils.data import Dataset, DataLoader
 
 # Results
 
-<img src="figures/time.png" width="400" />
-<img src="figures/acc.png" width="400" />
+<img src="figures/time.png" width="700" />
+<img src="figures/acc.png" width="700" />
 
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
