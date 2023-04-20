@@ -109,6 +109,86 @@ def run(method, sampling=0, crossvalidation=0, optm="SGD"):
     return acc, elapsed_time
 ```
 
+```Python
+class WeedDataset(Dataset):
+    def __init__(self, data, labels):
+        self.data = data
+        self.labels = labels
+
+    def __len__(self):
+        return len(self.data)
+
+    def __getitem__(self, index):
+        img = self.data[index]
+        img = torch.from_numpy(img).unsqueeze(0).float() / 255.0
+        label = self.labels[index]
+        return img, label
+
+class BinaryClassifier(nn.Module):
+    def __init__(self):
+        super(BinaryClassifier, self).__init__()
+        self.conv1 = nn.Conv2d(1, 16, 3, padding=1)
+        self.conv2 = nn.Conv2d(16, 32, 3, padding=1)
+        self.pool = nn.MaxPool2d(2, 2)
+        self.fc1 = nn.Linear(32 * 16 * 16, 256)
+        self.fc2 = nn.Linear(256, 1)
+        self.sigmoid = nn.Sigmoid()
+
+    def forward(self, x):
+        x = self.pool(F.relu(self.conv1(x)))
+        x = self.pool(F.relu(self.conv2(x)))
+        x = x.view(-1, 32 * 16 * 16)
+        x = F.relu(self.fc1(x))
+        x = self.fc2(x)
+        x = self.sigmoid(x)
+        return x
+
+def cnn(X_train, X_test, y_train, y_test, optm="SGD"):
+    train_dataset = WeedDataset(X_train, y_train)
+    test_dataset = WeedDataset(X_test, y_test)
+    train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
+    test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
+
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    model = BinaryClassifier().to(device)
+    criterion = nn.BCELoss()
+    optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
+
+    num_epochs = 30
+    start_time = time.time()
+    for epoch in range(num_epochs):
+        model.train()
+        running_loss = 0.0
+        for images, labels in train_loader:
+            images = images.to(device, dtype=torch.float)
+            labels = labels.to(device, dtype=torch.float).view(-1, 1)
+            optimizer.zero_grad()
+            outputs = model(images)
+            loss = criterion(outputs, labels)
+            loss.backward()
+            optimizer.step()
+            running_loss += loss.item()
+            # print(f"Epoch {epoch+1}/{num_epochs}, Loss: {running_loss/len(train_loader)}")
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    
+    model.eval()
+    correct = 0
+    total = 0
+    with torch.no_grad():
+        for images, labels in test_loader:
+            images = images.to(device, dtype=torch.float)
+            labels = labels.to(device, dtype=torch.float).view(-1, 1)
+            
+            outputs = model(images)
+            predicted = (outputs > 0.5).float()
+            total += labels.size(0)
+            correct += (predicted == labels).sum().item()
+    acc_cnn = correct / total
+    return acc_cnn, elapsed_time
+```
+
 # Results
 
 <img src="figures/time.png" width="600" />
