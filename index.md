@@ -51,8 +51,7 @@ from torch.utils.data import Dataset, DataLoader
 # Results
 
 <img src="figures/time.png" width="400" />
-
-![acc](https://github.com/howardjhe/516x-website/blob/master/figures/acc.png)
+<img src="figures/acc.png" width="400" />
 
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
