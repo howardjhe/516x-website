@@ -50,8 +50,8 @@ from torch.utils.data import Dataset, DataLoader
 
 # Results
 
-![Octocat](https://github.com/howardjhe/516x-website/blob/master/figures/time.png)
-![Octocat](https://github.com/howardjhe/516x-website/blob/master/figures/acc.png)
+![time](https://github.com/howardjhe/516x-website/blob/master/figures/time.png)
+![acc](https://github.com/howardjhe/516x-website/blob/master/figures/acc.png)
 
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
