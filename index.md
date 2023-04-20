@@ -18,7 +18,7 @@ _All experiments are conducted in Python and run on a laptop with four 2.4 GHz c
 
 To fulfill this project, we can follow the following steps:
 
-## Data preparation
+### Data preparation
   - Download the dataset from Kaggle ([Link](https://www.kaggle.com/datasets/fpeccia/weed-detection-in-soybean-crops))
   - Rearrange the number of images for weed and non-weed into 260 and 5000, respectively.
   - Import the necessary packages.
@@ -200,7 +200,7 @@ def cnn(X_train, X_test, y_train, y_test, optm="SGD"):
     return acc_cnn, elapsed_time
 ```
 
-## Model training
+### Model training
 - Fit a Naive Bayes classifier.
 ```python
 acc_nb, elapsed_time_nb = run("nb")
