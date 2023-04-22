@@ -266,12 +266,11 @@ plt.show()
 
 ## Discussion
 
-| NB        | SVM          | CNN |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
+|| NB        | SVM          | CNN |
+|:-------------|:-------------|:------------------|:------|
+| Model complexity| ok           | good swedish fish | nice  |
+| Interpretability| out of stock | good and plenty   | nice  |
+| Scalability| ok           | good `oreos`      | hmm   |
 
 ## Conclusion
 
