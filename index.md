@@ -275,8 +275,8 @@ plt.show()
  Here are some suitable applications for Naive Bayes (NB), Support Vector Machines (SVM), and Convolutional Neural Networks (CNN) in computer vision:
  
 - NB
-  - Text recognition
   - Image classification (simple tasks with a small number of features)
+  - Text recognition
 - SVM
   - Image classification (high-dimensional, binary or multi-class tasks)
   - Object detection
@@ -284,8 +284,9 @@ plt.show()
 - CNN
   - Image classification (highly effective for complex tasks)
   - Object detection and segmentation
+  - Deep Facial recognition
   - Image-to-image translation and style transfer
-  - Facial recognition
+
 
 #### References
 
