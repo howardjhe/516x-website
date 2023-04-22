@@ -266,13 +266,13 @@ plt.show()
 
 ## Discussion
 
-|                 | NB                       | SVM                         | CNN                      |
-|:-------------   |:-------------            |:------------------          |:------                   |
-| Complexity| Simple and fast to train | More complex                | Highly complex and deep  |
-| Interpretability| Relatively interpretable | Moderate interpretability   | Low interpretability     |
+|                 | NB                       | SVM                                 | CNN                      |
+|:-------------   |:-------------            |:------------------                  |:------                   |
+| Complexity      | Simple and fast to train | More complex                        | Highly complex and deep  |
+| Interpretability| Relatively interpretable | Moderate interpretability           | Low interpretability     |
 | Scalability     | Highly scalable          | Scalable for moderate-sized datasets|  Scalable but computationally expensive   |
 
-## Conclusion
+
 
 
 
