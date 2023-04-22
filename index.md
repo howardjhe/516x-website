@@ -272,7 +272,7 @@ plt.show()
 | Interpretability| Relatively interpretable | Moderate interpretability           | Low interpretability     |
 | Scalability     | Highly scalable          | Scalable for moderate-sized datasets|  Scalable but computationally expensive   |
 
- Here are some suitable applications for Naive Bayes, Support Vector Machines (SVM), and Convolutional Neural Networks (CNN) in computer vision:
+ Here are some suitable applications for Naive Bayes (NB), Support Vector Machines (SVM), and Convolutional Neural Networks (CNN) in computer vision:
  
 - NB
   - Text recognition
