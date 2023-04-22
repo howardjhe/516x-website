@@ -266,11 +266,11 @@ plt.show()
 
 ## Discussion
 
-|| NB        | SVM          | CNN |
-|:-------------|:-------------|:------------------|:------|
-| Model complexity| ok           | good swedish fish | nice  |
-| Interpretability| out of stock | good and plenty   | nice  |
-| Scalability| ok           | good `oreos`      | hmm   |
+|                 | NB                       | SVM                         | CNN                      |
+|:-------------   |:-------------            |:------------------          |:------                   |
+| Model complexity| Simple and fast to train | More complex                | Highly complex and deep  |
+| Interpretability| Relatively interpretable | Moderate interpretability   | Low interpretability     |
+| Scalability     | Highly scalable          | Scalable for moderate-sized datasets|  Scalable but computationally expensive   |
 
 ## Conclusion
 
