@@ -272,7 +272,20 @@ plt.show()
 | Interpretability| Relatively interpretable | Moderate interpretability           | Low interpretability     |
 | Scalability     | Highly scalable          | Scalable for moderate-sized datasets|  Scalable but computationally expensive   |
 
-
+ Here are some suitable applications for Naive Bayes, Support Vector Machines (SVM), and Convolutional Neural Networks (CNN) in computer vision:
+ 
+- NB
+  - Text recognition (e.g., Optical Character Recognition - OCR): Naive Bayes can be effective for simple text recognition tasks, especially when combined with feature extraction techniques such as Histogram of Oriented Gradients (HOG) or bag-of-features.
+  - Image classification: For simple image classification tasks with a relatively small number of features, Naive Bayes can be a quick and computationally efficient solution. However, it's important to note that Naive Bayes may not perform as well for more complex tasks or those with a large number of features due to its assumption of conditional independence between features.
+- SVM
+  - Image classification: SVM is well-suited for high-dimensional feature spaces and can perform well in binary or multi-class image classification tasks, especially when combined with suitable feature extraction techniques like HOG, SIFT, or bag-of-features.
+Object detection: SVM can be employed for object detection tasks when combined with a sliding window approach and effective feature extraction methods.
+  - Face recognition: SVMs have been used for face recognition tasks, where the objective is to identify a person based on their facial features.
+- CNN
+  - Image classification: CNNs are highly effective for complex image classification tasks, as they can learn hierarchical feature representations and automatically discover important features.
+  - Object detection and segmentation: CNN-based architectures like R-CNN, YOLO, and Mask R-CNN are widely used for object detection and segmentation tasks, as they can effectively learn spatial hierarchies and capture local patterns in images.
+  - Image-to-image translation and style transfer: CNNs have been applied to tasks like image-to-image translation (e.g., pix2pix, CycleGAN) and neural style transfer, where the goal is to change the appearance of an image while preserving its content.
+  - Facial recognition: Deep CNN architectures like VGG-Face, FaceNet, and DeepFace have been developed specifically for facial recognition tasks, achieving state-of-the-art performance.
 
 
 
