@@ -261,8 +261,8 @@ plt.savefig('time.png', dpi=300)
 plt.show()
 ```
 
-<img src="figures/time.png" width="600" />
-<img src="figures/acc.png" width="600" />
+<img src="figures/time2.png" width="600" />
+<img src="figures/acc2.png" width="600" />
 
 ## Discussion
 
