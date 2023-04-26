@@ -266,7 +266,7 @@ plt.show()
 
 ## Discussion
 
-As for caculating, NB computes basically only on the probabilities, which is doing simply multiplication and addition. SVM spends memory mainly on the  process of ther mapping through kernel functions (linear, polynomial, and RBF). CNN is much more complex including the calculation of convolution, nonlinear activate functions, the process of pooling and flattening.
+In terms of calculations, Naive Bayes (NB) primarily relies on probability computations, which involve simple multiplication and addition operations. SVM mainly consumes memory during the mapping process using kernel functions, such as linear, polynomial, and Radial Basis Function (RBF). CNN calculations are considerably more complex, including the computation of convolutions, nonlinear activation functions, and the processing of pooling and flattening in the pooling layer and fully connected layer, respectively.
 
 |                 | NB                       | SVM                                 | CNN                      |
 |:-------------   |:-------------            |:------------------                  |:------                   |
