@@ -289,6 +289,7 @@ In terms of calculations, Naive Bayes (NB) primarily relies on probability compu
   - Deep Facial recognition
   - Image-to-image translation and style transfer
 
+In conclusion, the methods of SVM and CNN can be suitable options for binary image classification due to their ability to handle high-dimensional data.
 
 #### References
 
