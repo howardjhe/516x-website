@@ -266,6 +266,8 @@ plt.show()
 
 ## Discussion
 
+As for caculating, NB computes basically only on the probabilities, which is doing simply multiplication and addition. SVM spends memory mainly on the  process of ther mapping through kernel functions (linear, polynomial, and RBF). CNN is much more complex including the calculation of convolution, nonlinear activate functions, the process of pooling and flattening.
+
 |                 | NB                       | SVM                                 | CNN                      |
 |:-------------   |:-------------            |:------------------                  |:------                   |
 | Complexity      | Simple and fast to train | More complex                        | Highly complex and deep  |
