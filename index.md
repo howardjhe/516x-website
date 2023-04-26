@@ -274,7 +274,7 @@ In terms of calculations, Naive Bayes (NB) primarily relies on probability compu
 | Interpretability| Relatively interpretable | Moderate interpretability           | Low interpretability     |
 | Scalability     | Highly scalable          | Scalable for moderate-sized datasets|  Scalable but computationally expensive   |
 
- Here are some suitable applications for Naive Bayes (NB), Support Vector Machines (SVM), and Convolutional Neural Networks (CNN) in computer vision:
+ Here are some suitable applications for NB, SVM, and CNN in computer vision:
  
 - NB
   - Image classification (simple tasks with a small number of features)
