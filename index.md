@@ -295,7 +295,7 @@ In conclusion, the methods of SVM and CNN can be favorable options for binary im
 
 The experiment in this project partially adheres to the FAIR principles, as it is somewhat findable and accessible. The dataset used in this project is publicly available on Kaggle, which enables researchers to access it with relative ease. However, to ensure better findability, it is essential to organize the data according to the standard directory structure, which should ideally be in compliance with the FAIR principles. The strucute of dataset used in this project is "class-based directory structure", which is like:
 
-```python
+```
 dataset/
 ├── weed/
 │   ├── image1.jpg
