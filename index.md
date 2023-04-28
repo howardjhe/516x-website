@@ -293,6 +293,22 @@ In terms of calculations, NB (which assumes all features are independent) primar
 
 In conclusion, the methods of SVM and CNN can be favorable options for binary image classification due to their ability to handle high-dimensional data.
 
+The experiment in this project partially adheres to the FAIR principles, as it is somewhat findable and accessible. The dataset used in this project is publicly available on Kaggle, which enables researchers to access it with relative ease. However, to ensure better findability, it is essential to organize the data according to the standard directory structure, which should ideally be in compliance with the FAIR principles. The strucute of dataset used in this project is "class-based directory structure", which is like:
+
+```python
+dataset/
+├── weed/
+│   ├── image1.jpg
+│   ├── image2.jpg
+│   ├── ...
+├── non_weed/
+│   ├── image1.jpg
+│   ├── image2.jpg
+│   ├── ...
+```
+
+Furthermore, this project also adheres to the FAIR principle of reusability. The methods used in the experiment, such as NB, SVM, and CNN, were implemented as functions, making it easy for other researchers to reuse and build upon the code in further steps. This approach facilitates transparency and reproducibility of the experiment, which are important aspects of scientific research. By making the code reusable, other researchers can test and validate the methods and results, and potentially build upon them to generate new insights or applications.
+
 #### References
 
 1. Zhang, H. (2004). The optimality of naive Bayes. Proceedings of the Seventeenth International Florida Artificial Intelligence Research Society Conference. [pdf](https://www.researchgate.net/publication/221650814_Spam_Filtering_with_Naive_Bayes_-_Which_Naive_Bayes)
