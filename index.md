@@ -307,7 +307,7 @@ dataset/
 │   ├── ...
 ```
 
-Furthermore, this project also adheres to the FAIR principle of reusability. The methods used in the experiment, such as NB, SVM, and CNN, were implemented as functions, making it easy for other researchers to reuse and build upon the code in further steps. This approach facilitates transparency and reproducibility of the experiment, which are important aspects of scientific research. By making the code reusable, other researchers can test and validate the methods and results, and potentially build upon them to generate new insights or applications.
+Furthermore, this project also follows to the FAIR principle of reusability. The methods used in the experiment, such as NB, SVM, and CNN, were implemented as functions, making it easy for other researchers to reuse and build upon the code in further steps. This approach facilitates transparency and reproducibility of the experiment, which are important aspects of scientific research. By making the code reusable, other researchers can test and validate the methods and results, and potentially build upon them to generate new insights or applications.
 
 #### References
 
