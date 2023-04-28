@@ -266,7 +266,7 @@ plt.show()
 
 ## Discussion
 
-Navie Bayes (NB), Support Vector Machine (SVM), oversampling, undersampling and kernel changing, which are takeaway from the class were implemented in this project. Besides, Convolutional Neuronal Network as a common method for classification was used and compared with the above methods. Their advantage and disadvange of dealing with this task and assumptions behind will be discussed in this section.
+IIn this project, I implemented various machine learning techniques that we learned in class, such as Naive Bayes (NB), Support Vector Machine (SVM), oversampling, undersampling, and SVM kernel changing. Furthermore, I employed Convolutional Neural Network (CNN), a popular classification method, and evaluated its performance against the previously mentioned techniques. In this section, I will examine the strengths and weaknesses of each approach in addressing the task at hand, as well as their underlying assumptions.
 
 In terms of calculations, NB primarily relies on probability computations, which involve simple **multiplication and addition** operations. SVM mainly consumes memory during the mapping process using **kernel functions**, such as linear, polynomial, and Radial Basis Function (RBF). CNN calculations are considerably more complex, including the computation of **convolutions, nonlinear activation functions**, and the processing of **pooling and flattening** in the pooling layer and fully connected layer, respectively.
 
