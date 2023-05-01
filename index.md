@@ -309,6 +309,8 @@ dataset/
 
 Furthermore, this project also follows to the FAIR principle of reusability. The methods used in the experiment, such as NB, SVM, and CNN, were implemented as functions, making it easy for other researchers to reuse and build upon the code in further steps. This approach facilitates transparency and reproducibility of the experiment, which are important aspects of scientific research. By making the code reusable, other researchers can test and validate the methods and results, and potentially build upon them to generate new insights or applications.
 
+For further work after weed classification, this knowledge can aid in precision agriculture practices, such as automatically targeting herbicide applications using agricultural robots. By focusing on specific needs, it can help reduce the use of chemicals and contribute to a more sustainable environment.
+
 #### References
 
 1. Zhang, H. (2004). The optimality of naive Bayes. Proceedings of the Seventeenth International Florida Artificial Intelligence Research Society Conference. [pdf](https://www.researchgate.net/publication/221650814_Spam_Filtering_with_Naive_Bayes_-_Which_Naive_Bayes)
