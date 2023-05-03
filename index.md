@@ -291,7 +291,11 @@ In terms of calculations, NB (which assumes all features are independent) primar
   - Deep Facial recognition
   - Image-to-image translation and style transfer
 
-In conclusion, the methods of SVM and CNN can be favorable options for binary image classification due to their ability to handle high-dimensional data.
+## Conclusion
+
+In summary, SVM and CNN can be favorable options for binary image classification due to their ability to handle high-dimensional data. Although NB can train and perform inference rapidly (in less than 0.15 seconds), its accuracy is relatively low, falling below 70%. If a task requires high accuracy, NB may not be the most suitable choice. For instance, you wouldn't want a self-driving car to have only 70% accuracy in object detection during driving. The results show that resampling methods significantly improve NB's accuracy while only adding an extra 0.11 seconds, making it a viable candidate for simple image classification tasks.
+
+On the other hand, SVM with cross-validation and CNN require substantial training time, taking 223.08 and 75.13 seconds, respectively. For complex tasks, it might be necessary to train these models in advance. Despite the high computing time and cost associated with CNN, its near 99.9% accuracy makes it indispensable for complicated tasks that demand precision.
 
 The experiment in this project partially adheres to the FAIR principles, as it is somewhat findable and accessible. The dataset used in this project is publicly available on Kaggle, which enables researchers to access it with relative ease. However, to ensure better findability, it is essential to organize the data according to the standard directory structure, which should ideally be in compliance with the FAIR principles. The strucute of dataset used in this project is "class-based directory structure", which is like:
 
